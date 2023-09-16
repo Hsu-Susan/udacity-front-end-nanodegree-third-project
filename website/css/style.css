@@ -1,0 +1,182 @@
+@import url(layout.css);
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body  {
+    background-image: url('https://images.pexels.com/photos/37646/new-york-skyline-new-york-city-city-37646.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-size:cover;
+        -webkit-animation: slidein 50s;
+        animation: slidein 50s;
+
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+
+        -webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+
+        -webkit-animation-direction: alternate;
+        animation-direction: alternate;              
+}
+
+@-webkit-keyframes slidein {
+from {background-position: top; background-size:1500px; }
+to {background-position: -100px 0px;background-size:2750px;}
+}
+
+@keyframes slidein {
+from {background-position: top;background-size:1500px; }
+to {background-position: -100px 0px;background-size:2750px;}
+
+}
+
+
+#app {
+    color: rgb(238, 48, 178);
+    font-size: 20px;
+    font-family: 'Lato', sans-serif;
+    margin: 0 auto;
+}
+
+.holder {
+    padding: 2rem;
+    margin: 0;
+}
+
+.holder.feel {
+    display: flex;
+    flex-direction: column;
+    padding-top: 0;
+}
+
+#box {
+    background-color: #f8e2ecc4;
+    border-radius: 20px;
+    box-shadow: 4px 5px 17px 6px rgba(59, 74, 107, .07);
+    margin: 1rem;
+}
+
+.entry {
+    background: rgba(181, 82, 163, 0.4);
+}
+
+#journal-entry {
+    background-color: rgb(255 255 255 / 90%);
+    margin: 1rem;
+}
+
+.hidden {
+    display: none;
+}
+
+.headline {
+    padding: 1rem;
+}
+
+.icon {
+    height: 70%;
+    max-width: 100%;
+}
+
+.visible {
+    display: block;
+}
+
+.title {
+    margin-bottom: 1rem;
+}
+
+/*  Basic Styling To Override Default For Basic HTML Elements */
+label {
+    display: block;
+    font-size: 27px;
+    margin-bottom: 10px;
+}
+
+input {
+    display: flex;
+    width: -webkit-fill-available;
+    height: 60px;
+    background-color: white;
+    color: rgb(234, 32, 163);
+    font-size: 20px;
+    font-family: 'Lato', sans-serif;
+    border: none;
+    border-radius: 10px;
+    padding: 0 10px;
+}
+
+button {
+    width: 130px;
+    height: 50px;
+    background: #bf5082;
+    color: white;
+    font-size: 26px;
+    font-family: 'Lato', sans-serif;
+    border: none;
+    box-shadow: 2px 4px 10px 1px #afafafc2;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 1rem;
+    align-self: center;
+}
+h1 {
+    font-size: 36px;
+}
+textarea{
+    display: flex;
+    background-color: white;
+    resize: none;
+    color: rgb(234, 32, 163);
+    font-size: 20px;
+    font-family: 'Lato', sans-serif;
+    border: none;
+    border-radius: 10px;
+    padding: 0 5px;
+    border-radius: 10px;
+    padding: 10px 10px 0 10px;
+}
+/* Reset style for HTML element on active to have no border*/
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+/* Style for Placeholder Text*/
+::placeholder { /* Firefox, Chrome, Opera */ 
+    color: rgb(139, 131, 131);
+    font-family: 'Lato', sans-serif;
+
+} 
+  
+:-ms-input-placeholder { /* Internet Explorer 10-11 */ 
+    color: black;
+    font-family: 'Lato', sans-serif;
+
+} 
+  
+::-ms-input-placeholder { /* Microsoft Edge */ 
+    color: black;
+    font-family: 'Lato', sans-serif;
+
+}
+table, td, th {
+    border: 1px solid;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+td {
+    padding: 10px;
+}
+td:first-child{
+    width: 200px;
+}

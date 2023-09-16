@@ -1,0 +1,50 @@
+/* CSS grid layout */
+#app {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 120px 1fr 50px;
+    grid-template-areas: 
+    "hd"
+    "main"
+    "ft";
+    justify-content: center;
+}
+
+#header {
+    grid-area: hd;
+    text-align: center;
+}
+
+#main {
+    grid-area: main;
+    min-width: 0;
+    min-height: 0;
+}
+
+footer {
+    grid-area: ft;
+    text-align: center;
+    font-size: 17px;
+    color: hotpink;
+    font-weight: bolder;
+    text-shadow: 1px 1px 2px black, 0 0 1em rgb(255, 0, 251), 0 0 0.2em rgb(238, 0, 255);
+}
+
+
+/* CSS grid layout for desktop */
+@media(min-width: 900px) {
+    #app {
+        grid-template-columns: auto;
+        grid-template-rows: 150px 1fr 1fr 50px;
+        grid-template-areas: 
+        "hd hd hd"
+        ". main ."
+        ". main ."
+        "ft ft ft"
+    }
+
+    #box {
+        margin: 0;
+    }
+
+}
